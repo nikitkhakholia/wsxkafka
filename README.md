@@ -16,7 +16,7 @@ This project demonstrates a real-time data pipeline built with Node.js, simulati
 
 ---
 ## ✅ Setup and Execution Steps
-- Ensure Java 17 or higher is installed on your system.
+- Ensure Java 17 or higher is installed on your system(to run Apache Kafka).
 - Download and install Apache Kafka from: ```https://kafka.apache.org/documentation/#quickstart```.
 - Run ```npm install``` to install the required packages (e.g., kafkajs, ws)
 - Start ZooKeeper and Kafka; verify Kafka is running at ```localhost:9092```
