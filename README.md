@@ -6,10 +6,19 @@ This project demonstrates a real-time data pipeline built with Node.js, simulati
 
 ## Features
 
-- ✅ Connects to Kraken WebSocket API (wss://ws.kraken.com)
+- ✅ Connects to Kraken WebSocket API (```wss://ws.kraken.com```)
 - ✅ Subscribes to ticker updates for multiple crypto pairs (e.g., BTC/USD, ETH/USD)
 - ✅ Extracts key data: symbol, timestamp, bid, ask
 - ✅ Publishes each update as a JSON message to a local Kafka topic (quotes.crypto)
 - ✅ Kafka consumer reads the topic in real time
-- ✅ WebSocket server broadcasts the updates to all connected clients (ws://localhost:8080)
+- ✅ WebSocket server broadcasts the updates to all connected clients (```ws://localhost:8080```)
 - ✅ Handles client connections, disconnections, and errors gracefully
+
+---
+## ✅ Setup and Execution Steps
+- Ensure Java 17 or higher is installed on your system.
+- Download and install Apache Kafka from: ```https://kafka.apache.org/documentation/#quickstart```.
+- Start ZooKeeper and Kafka; verify Kafka is running at ```localhost:9092```
+- Run ```wsconsumer_kafkaproducer.js``` to connect to the ```Kraken WebSocket API``` and publish real-time ticker data (BTC/USD, ETH/USD) to the Kafka topic ```quotes.crypto```
+- Run ```kafkaconsumer_wss.js``` to consume data from the Kafka topic and broadcast it via a WebSocket server.
+- Connect any WebSocket client (e.g., Postman) to ```ws://localhost:8080``` to receive the real-time data stream.
