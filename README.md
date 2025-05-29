@@ -18,6 +18,7 @@ This project demonstrates a real-time data pipeline built with Node.js, simulati
 ## ✅ Setup and Execution Steps
 - Ensure Java 17 or higher is installed on your system.
 - Download and install Apache Kafka from: ```https://kafka.apache.org/documentation/#quickstart```.
+- Run ```npm install``` to install the required packages (e.g., kafkajs, ws)
 - Start ZooKeeper and Kafka; verify Kafka is running at ```localhost:9092```
 - Run ```wsconsumer_kafkaproducer.js``` to connect to the ```Kraken WebSocket API``` and publish real-time ticker data (BTC/USD, ETH/USD) to the Kafka topic ```quotes.crypto```
 - Run ```kafkaconsumer_wss.js``` to consume data from the Kafka topic and broadcast it via a WebSocket server.
